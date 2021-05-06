@@ -12,7 +12,7 @@ class Directory extends React.Component {
 					title: 'hats',
 					imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
 					id: 1,
-					linkUrl: 'shop/hats',
+					linkUrl: 'hats',
 				},
 				{
 					title: 'jackets',
@@ -53,11 +53,14 @@ class Directory extends React.Component {
 						title={section.title.toUpperCase()}
 						imageUrl={section.imageUrl}
 						size={section.size}
+						linkUrl={section.linkUrl}
 					/>
 				))}
 			</div>
 		);
 	}
 }
+
+React.createElement(Directory);
 
 export default Directory;

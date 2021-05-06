@@ -5,7 +5,9 @@ import Directory from '../../components/directory/directory.component.jsx'
 import './homepage.styles.scss';
 
 const HomePage = () => (
-	<div className="homepage"> <Directory /> </div>
+	<div className="homepage"> 
+		<Directory /> 
+	</div>
 );
 
 React.createElement(HomePage);
