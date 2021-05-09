@@ -35,7 +35,8 @@ class Directory extends React.Component {
 				},
 				{
 					title: 'mens',
-					imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+					imageUrl:
+						'https://i.pinimg.com/originals/5f/d2/ab/5fd2abfa91897226bb9ecd732e0c2fe3.jpg',
 					size: 'large',
 					id: 5,
 					linkUrl: 'shop/mens',
@@ -43,7 +44,6 @@ class Directory extends React.Component {
 			],
 		};
 	}
-
 	render() {
 		return (
 			<div className="directory-menu">
