@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-	{
+const SHOP_DATA = {
+	hats: {
 		id: 1,
 		title: 'Hats',
 		routeName: 'hats',
@@ -60,7 +60,7 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	sneakers: {
 		id: 2,
 		title: 'Sneakers',
 		routeName: 'sneakers',
@@ -115,7 +115,7 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	jackets: {
 		id: 3,
 		title: 'Jackets',
 		routeName: 'jackets',
@@ -152,7 +152,7 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	womens: {
 		id: 4,
 		title: 'Womens',
 		routeName: 'womens',
@@ -201,11 +201,18 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	mens: {
 		id: 5,
 		title: 'Mens',
 		routeName: 'mens',
 		items: [
+			{
+				id: 38,
+				name: 'Me For Sale',
+				imageUrl:
+					'https://i.pinimg.com/originals/e3/f1/98/e3f198b95d0f2b64bbe46891448bc0c2.jpg',
+				price: 1,
+			},
 			{
 				id: 30,
 				name: 'Camo Down Vest',
@@ -224,6 +231,7 @@ const SHOP_DATA = [
 				imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
 				price: 25,
 			},
+
 			{
 				id: 33,
 				name: 'Pink T-shirt',
@@ -236,14 +244,28 @@ const SHOP_DATA = [
 				imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
 				price: 40,
 			},
+						{
+				id: 37,
+				name: 'Black Collar T-Shirt',
+				imageUrl:
+					'https://i.pinimg.com/originals/4b/bc/c7/4bbcc703e8e4aacf3c8a35bde91c9e76.jpg',
+				price: 20,
+			},
 			{
 				id: 35,
 				name: 'Burgundy T-shirt',
 				imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
 				price: 25,
 			},
+			{
+				id: 36,
+				name: 'Black Velvet Coat',
+				imageUrl:
+					'https://i.pinimg.com/originals/87/0d/dd/870ddd38d8d14a11da5beb5fbef5f54c.jpg',
+				price: 50,
+			},
 		],
 	},
-];
+};
 
 export default SHOP_DATA;
