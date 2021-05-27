@@ -8,10 +8,16 @@ import ShopPage from './pages/shop/shop.component.jsx';
 import Header from './components/header/header.component.jsx';
 import SignInAndSignUpPage from './pages/signin-signup/signin-signup.component.jsx';
 import CheckoutPage from './pages/checkout/checkout.component.jsx';
+import Footer from './components/footer/footer.component';
+
 import { auth } from './firebase/firebase.utils.js';
-import { createUserProfileDocument } from './firebase/firebase.utils.js';
+import {
+	createUserProfileDocument,
+	addCollectionAndDocuments,
+} from './firebase/firebase.utils.js';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selector.js';
+import { selectCollectionForPreview } from './redux/shop/shop.selector';
 
 import './App.css';
 
@@ -19,7 +25,7 @@ class App extends React.Component {
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
-		const { setCurrentUser } = this.props;
+		const { setCurrentUser, collectionArray } = this.props;
 
 		this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
 			if (userAuth) {
@@ -35,6 +41,12 @@ class App extends React.Component {
 			}
 
 			setCurrentUser(userAuth);
+
+			// @for adding the data to firestore
+			// addCollectionAndDocuments(
+			// 	'collections',
+			// 	collectionArray.map(({ title, items }) => ({ title, items }))
+			// );
 		});
 	}
 
@@ -62,6 +74,7 @@ class App extends React.Component {
 						}
 					/>
 				</Switch>
+				<Footer />
 			</div>
 		);
 	}
@@ -69,6 +82,7 @@ class App extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
 	currentUser: selectCurrentUser,
+	collectionArray: selectCollectionForPreview,
 });
 
 const mapDispatchToProps = dispatch => ({
